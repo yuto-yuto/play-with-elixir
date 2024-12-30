@@ -12,11 +12,11 @@
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash"
-            }
-        },
-        "extensions": [
-            "jakebecker.elixir-ls"
-        ]
+            },
+            "extensions": [
+                "jakebecker.elixir-ls"
+            ]
+        }
     },
     "remoteUser": "vscode"
 }
