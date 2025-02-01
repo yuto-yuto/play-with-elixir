@@ -17,7 +17,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && apt-get autoremove -y \
     && apt-get clean -y
 
-USER vscode
+USER vscode    
 
 # Install Phoenix
 EXPOSE 4000
@@ -25,3 +25,12 @@ ARG PHOENIX_VERSION="1.7.18"
 RUN mix local.hex --force \
   && mix local.rebar --force \
   && mix archive.install --force hex phx_new ${PHOENIX_VERSION}
+
+# Install zsh
+RUN sudo apt update && sudo apt install -y \
+zsh \
+curl \
+git \
+&& sudo rm -rf /var/lib/apt/lists/*
+# Install Oh My Zsh
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
