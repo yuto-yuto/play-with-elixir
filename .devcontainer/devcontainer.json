@@ -14,7 +14,9 @@
                 "terminal.integrated.defaultProfile.linux": "zsh"
             },
             "extensions": [
-                "jakebecker.elixir-ls"
+                "jakebecker.elixir-ls",
+                "pantajoe.vscode-elixir-credo",
+                "florinpatrascu.vscode-elixir-snippets"
             ]
         }
     },
